@@ -10,9 +10,9 @@ StaySafe is a mobile application designed to enhance personal security by provid
 2. [Key Features](#key-features)
 3. [Software Architecture](#software-architecture)
 4. [Backend Project Structure](#backend-project-structure)
-5. [Getting Started](#getting-started)
-6. [Contributing](#contributing)
-7. [Future Improvements](#future-improvements)
+5. [Prerequisites](#prerequisites)
+6. [Docker Image](#docker-image)
+7. [Contributors](#contributors)
 
 ## Description
 StaySafe empowers users to quickly send geolocation alerts to designated contacts in case of danger and receive real-time notifications about potentially hazardous zones. By leveraging geolocation technology, the app enhances personal safety and helps users keep their loved ones informed.
@@ -58,10 +58,75 @@ The backend code follows a modular and organized structure, leveraging the power
 **Service Layer**: This package contains business logic for the application. Services interact with the repository layer to fetch or modify data and provide processed information to the controller layer.
 
 ## Docker Image
+```sh
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_staysafe
+    environment:
+      MYSQL_DATABASE: staysafe_db
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - staysafe_network
+
+  spring_app:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: staysafe_backend
+    depends_on:
+      - mysql
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/staysafe_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: true
+      SERVER_PORT: 8082
+      JWT_SECRET: dGhpc2lzYXZlcnlzZWN1cmVhbmRzYWZlc2VjcmV0a2V5MTIzIQ==
+      JWT_VALIDITY: 3600000
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: anejjarihssane@gmail.com
+      SPRING_MAIL_PASSWORD: vbek rbhl etka lyvd
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: true
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: true
+    networks:
+      - staysafe_network
+
+  android_build:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+      args:
+        - MAPS_API_KEY=AIzaSyBeju7DcjbThPgbS9gYxNGvj7_KoVesVQ0
+    volumes:
+      - android_build:/app/app/build/outputs/apk
+    networks:
+      - staysafe_network
+
+volumes:
+  mysql_data:
+  android_build:
+
+networks:
+  staysafe_network:
+    driver: bridge
+
+```
 
 
-
-### Prerequisites:
+## Prerequisites:
 - Git
 - Java Development Kit (JDK) 11+
 - Maven
