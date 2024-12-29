@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#5AB5FF</color>
+    <color name="purple_500">#5AB5FF</color>
+    <color name="purple_700">#5AB5FF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Couleurs principales mises à jour -->
+    <color name="blue_sky_light">#E3F2FD</color> <!-- Bleu ciel très clair -->
+    <color name="blue_sky_medium">#BBDEFB</color> <!-- Bleu ciel légèrement plus foncé -->
+    <color name="blue_sky_dark">#90CAF9</color> <!-- Bleu ciel plus prononcé -->
+    <color name="text_blue_sky_dark">#1565C0</color> <!-- Bleu sombre pour le texte -->
+
+    <color name="gray_1">#BEBEBE</color>
+    <color name="gray_2">#808080</color>
+    <color name="gray_3">#2a2a2a</color>
+
+    <color name="white_gray">#dfdfdf</color>
+
+
+
+    <color name="pink">#FFEF6B99</color>
+    <color name="shadow">#66000000</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorPurple">#6c63ff</color>
+    <color name="colorIndigo">#303F9F</color>
+    <color name="colorBlueMidnight">#003366</color>
+    <color name="colorGrey">#C9C9C9</color>
+    <color name="textColorPrimary">#FF000000</color>
+    <color name="textColorSecondary">#CC000000</color>
+    <color name="login_bg">#DFF2F6</color>
+</resources>

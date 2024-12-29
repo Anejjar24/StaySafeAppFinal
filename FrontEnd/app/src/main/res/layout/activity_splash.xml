@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#242732"
+tools:context=".SplashActivity">
+
+<!-- Logo de l'application -->
+<ImageView
+    android:id="@+id/logo"
+    android:layout_width="300dp"
+android:layout_height="300dp"
+android:src="@drawable/logo"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintBottom_toTopOf="@id/appName"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:contentDescription="logo" />
+
+<!-- Nom de l'application -->
+<TextView
+    android:id="@+id/appName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="StaySafe"
+    android:textColor="#FFFFFF"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-medium"
+    app:layout_constraintTop_toBottomOf="@id/logo"
+    app:layout_constraintBottom_toTopOf="@id/loadingCircle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+<ProgressBar
+    android:id="@+id/loadingCircle"
+    style="?android:attr/progressBarStyleLarge"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:indeterminate="true"
+    app:layout_constraintTop_toBottomOf="@id/appName"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

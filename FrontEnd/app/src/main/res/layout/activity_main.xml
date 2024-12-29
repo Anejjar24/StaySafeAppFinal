@@ -1,0 +1,230 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Username -->
+
+
+        <!-- SOS Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/sos_button_background"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/btnSOS"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sos_button_background"
+                    android:contentDescription="SOS Button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOS"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Start Shake Detection Button -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShakeDetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="12dp"
+            android:text="Start Shake Detection"
+            style="@style/ButtonWhiteOutlined" />
+
+
+        <!-- Grid Layout for Options -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_marginTop="24dp"
+            android:padding="8dp">
+
+            <!-- Profile -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/containerblue"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/button2"
+                    android:layout_width="40dp"
+                    android:layout_height="37dp"
+                    android:contentDescription="Profile Icon"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Profile"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Manage your account information"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Contacts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:background="@drawable/containerblue"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/contact"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:contentDescription="Contacts Icon"
+                    android:src="@drawable/ic_contacts" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contacts"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Quick access to trusted contacts"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <!-- Helpline -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/containerblue"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/button3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Helpline Icon"
+                    android:src="@drawable/maps_and_flags_pin_svgrepo_com" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See Your Location"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <!-- Safety Tips -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@drawable/containerblue"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/buttonset"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Helpline Icon"
+                    android:src="@drawable/ic_safety_tips" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tips"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tips For Your safety"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>

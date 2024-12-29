@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_staysafe
+    environment:
+      MYSQL_DATABASE: staysafe_db
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - staysafe_network
+
+  spring_app:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: staysafe_backend
+    depends_on:
+      - mysql
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/staysafe_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: true
+      SERVER_PORT: 8082
+      JWT_SECRET: dGhpc2lzYXZlcnlzZWN1cmVhbmRzYWZlc2VjcmV0a2V5MTIzIQ==
+      JWT_VALIDITY: 3600000
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: anejjarihssane@gmail.com
+      SPRING_MAIL_PASSWORD: vbek rbhl etka lyvd
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: true
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: true
+    networks:
+      - staysafe_network
+
+  android_build:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+    volumes:
+      - android_build:/app/app/build/outputs/apk
+    networks:
+      - staysafe_network
+
+volumes:
+  mysql_data:
+  android_build:
+
+networks:
+  staysafe_network:
+    driver: bridge
