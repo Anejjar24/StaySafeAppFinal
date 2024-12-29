@@ -40,22 +40,22 @@ The application architecture consists of:
 
 The backend code follows a modular and organized structure, leveraging the power of Spring Boot for building a robust and scalable application.
 
-### 1. `com.example.demo`
+### 1. `ma.ensaj.staysafe`
 **Main Application Class**: `DemoApplication.java` serves as the entry point for the Spring Boot application. It includes the main method to bootstrap and start the application.
 
-### 2. `com.example.demo.controller`
+### 2. `ma.ensaj.staysafe.controller`
 **Controller Layer**: This package contains classes responsible for handling incoming HTTP requests. Each controller defines RESTful endpoints for specific features or entities and delegates the request processing to the service layer.
 
-### 3. `com.example.demo.model`
+### 3. `ma.ensaj.staysafe.entity`
 **Entity Layer**: The model package includes classes representing data entities in the application. These classes use JPA annotations to define the structure of the corresponding database tables, ensuring seamless ORM mapping.
 
-### 4. `com.example.demo.repository`
+### 4. `ma.ensaj.staysafe.repository`
 **Repository Layer**: This package contains interfaces extending Spring Data JPA repository interfaces. These provide built-in methods for CRUD operations and enable interaction with the database without requiring boilerplate code.
 
-### 5. `com.example.demo.security`
+### 5. `ma.ensaj.staysafe.security`
 **Security Configuration**: The security package includes classes for configuring authentication and authorization mechanisms. This might involve defining roles, managing user credentials, and securing endpoints based on roles or permissions.
 
-### 6. `com.example.demo.service`
+### 6. `ma.ensaj.staysafe.service`
 **Service Layer**: This package contains business logic for the application. Services interact with the repository layer to fetch or modify data and provide processed information to the controller layer.
 
 ## Docker Image
