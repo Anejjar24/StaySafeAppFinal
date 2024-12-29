@@ -69,7 +69,7 @@ The backend code follows a modular and organized structure, leveraging the power
 - Google Maps API key
 ## Contributors
 - [Anejjar Ihssane](https://github.com/Anejjar24)
-- [Bousensar Rajaa]((https://github.com/rajaa52)
+- [Bousensar Rajaa](https://github.com/rajaa52)
 - [Lachgar Mohamed ](https://www.researchgate.net/profile/Mohamed-Lachgar)
 
 
