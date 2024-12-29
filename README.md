@@ -59,8 +59,7 @@ The backend code follows a modular and organized structure, leveraging the power
 
 ## Docker Image
 
-## Getting Started
-Follow these steps to set up and run the StaySafe application locally:
+
 
 ### Prerequisites:
 - Git
@@ -68,10 +67,9 @@ Follow these steps to set up and run the StaySafe application locally:
 - Maven
 - MySQL
 - Google Maps API key
+## Contributors
+- [Anejjar Ihssane](https://github.com/Anejjar24)
+- [Bousensar Rajaa]((https://github.com/rajaa52)
+- [Lachgar Mohamed ](https://www.researchgate.net/profile/Mohamed-Lachgar)
 
-### Setup Instructions:
 
-#### Clone the Repository:
-```bash
-git clone https://github.com/YourUsername/StaySafe.git
-cd StaySafe
