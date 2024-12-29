@@ -24,8 +24,9 @@ StaySafe empowers users to quickly send geolocation alerts to designated contact
 
 ## Software Architecture
 The StaySafe architecture employs a modern, modular approach to ensure scalability, maintainability, and robustness.
-![diagram-export-29-12-2024-04_44_18](https://github.com/user-attachments/assets/acdc6564-fd30-40a9-ba15-1ff6493d4ef9)
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/acdc6564-fd30-40a9-ba15-1ff6493d4ef9" alt="app" width="700">
+</p>
 
 ### Technologies Used:
 - **Frontend**: HTML, CSS, JavaScript
