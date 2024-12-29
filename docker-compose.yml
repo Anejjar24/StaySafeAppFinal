@@ -47,6 +47,8 @@ services:
     build:
       context: ./FrontEnd
       dockerfile: Dockerfile
+      args:
+        - MAPS_API_KEY=AIzaSyBeju7DcjbThPgbS9gYxNGvj7_KoVesVQ0
     volumes:
       - android_build:/app/app/build/outputs/apk
     networks:
