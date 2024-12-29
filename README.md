@@ -12,7 +12,8 @@ StaySafe is a mobile application designed to enhance personal security by provid
 4. [Backend Project Structure](#backend-project-structure)
 5. [Prerequisites](#prerequisites)
 6. [Docker Image](#docker-image)
-7. [Contributors](#contributors)
+7. [Demonstration Video](#demonstration-video)
+8. [Contributors](#contributors)
 
 ## Description
 StaySafe empowers users to quickly send geolocation alerts to designated contacts in case of danger and receive real-time notifications about potentially hazardous zones. By leveraging geolocation technology, the app enhances personal safety and helps users keep their loved ones informed.
@@ -132,6 +133,11 @@ networks:
 - Maven
 - MySQL
 - Google Maps API key
+## Demonstration Video
+part 1:
+part 2:
+https://github.com/user-attachments/assets/01940d43-d3df-4cb4-a1db-442bd46ece29
+
 ## Contributors
 - [Anejjar Ihssane](https://github.com/Anejjar24)
 - [Bousensar Rajaa](https://github.com/rajaa52)
