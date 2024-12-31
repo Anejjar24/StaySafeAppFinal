@@ -96,12 +96,7 @@ services:
       SERVER_PORT: 8082
       JWT_SECRET: dGhpc2lzYXZlcnlzZWN1cmVhbmRzYWZlc2VjcmV0a2V5MTIzIQ==
       JWT_VALIDITY: 3600000
-      SPRING_MAIL_HOST: smtp.gmail.com
-      SPRING_MAIL_PORT: 587
-      SPRING_MAIL_USERNAME: anejjarihssane@gmail.com
-      SPRING_MAIL_PASSWORD: vbek rbhl etka lyvd
-      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: true
-      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: true
+      
     networks:
       - staysafe_network
 
